@@ -20,6 +20,6 @@ export default class UserError extends Exception {
       }
     }
 
-    super(msg)
+    super(msg, actualCode)
   }
 }
