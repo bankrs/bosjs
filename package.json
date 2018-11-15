@@ -1,0 +1,65 @@
+{
+  "name": "bosjs",
+  "version": "1.0.0",
+  "description": "Bankrs OS JavaScript client",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "nyc mocha",
+    "prepublishOnly": "./node_modules/.bin/eslint \"lib/**\" --fix && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bankrs/bosjs.git"
+  },
+  "keywords": [
+    "bankrs-os",
+    "api",
+    "banks",
+    "payments"
+  ],
+  "author": "Bankrs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bankrs/bosjs/issues"
+  },
+  "homepage": "https://github.com/bankrs/bosjs",
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-typescript": "^0.13.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^5.2.0",
+    "mocha-typescript": "^1.1.17",
+    "nyc": "^13.1.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6",
+    "typescript-eslint-parser": "^20.1.1"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "all": true
+  }
+}
