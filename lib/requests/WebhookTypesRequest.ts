@@ -4,7 +4,7 @@ import User from '../authentication/User' // eslint-disable-line no-unused-vars
 /**
  * Get webhooks types
  */
-export default class WebhookTypes extends ApiRequest {
+export default class WebhookTypesRequest extends ApiRequest {
   /**
      * @param user
      */

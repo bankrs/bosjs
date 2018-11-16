@@ -20,7 +20,7 @@ abstract class ApiRequest {
     /**
      * Endpoint for this request.
      */
-    public readonly endpoint: string = '';
+    public readonly endpoint: string | undefined;
 
     /**
      * When true then perform request to sandbox API
@@ -38,11 +38,6 @@ abstract class ApiRequest {
     public readonly errorCodes = [400];
 
     /**
-     * Allowed success and error codes.
-     */
-    public readonly expectedCodes = this.successCodes.concat(this.errorCodes);
-
-    /**
      * Set Application key
      */
     public readonly appKey: string = '';
@@ -54,6 +49,14 @@ abstract class ApiRequest {
      * @param user user credentials
      */
     public constructor (public readonly payload: any, public readonly user?: User) {}
+
+    /**
+     * Allowed success and error codes.
+     */
+    public get expectedCodes(): number[]
+    {
+        return this.successCodes.concat(this.errorCodes)
+    }
 }
 
 export default ApiRequest

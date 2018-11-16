@@ -1,10 +1,12 @@
 import { suite, test } from 'mocha-typescript';
 import { assert } from 'chai';
 
+import ApplicationCreateRequest from '../lib/requests/ApplicationCreateRequest';
 import AccessDenied from '../lib/errors/AccessDenied';
 import UserError from '../lib/errors/UserError';
 import ApiClient from '../lib/ApiClient';
 import ApiRequest from '../lib/ApiRequest';
+import User from './models/User';
 
 @suite
 class ApiClientTest {
@@ -93,6 +95,26 @@ class ApiClientTest {
 
 		assert.isTrue(invoked);
 		assert.strictEqual(invokedWith, error);
+	}
+
+	@test
+	async 'set httpClient'() {
+		const httpClientMock = (input: RequestInfo, init?: RequestInit): Promise<Response> => {
+			return Promise.resolve(new Response(`{"status": "created"}`));
+		}
+		
+		let resBody = null;
+		let resErr = null;
+
+		const c = new ApiClient('https://api.com', undefined, undefined, httpClientMock)
+		await c.send(new ApplicationCreateRequest(new User, {}), (res) => {
+			resBody = res
+		}, (err) => {
+			resErr = err
+		});
+
+		assert.strictEqual(resErr, null);
+		assert.deepEqual(resBody, { status: 'created' });
 	}
 
 	private mockApiClient(error: Error): ApiClient {

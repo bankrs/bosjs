@@ -130,6 +130,10 @@ export default class ApiClient {
      * @returns A promise to be resolved with the response.
      */
     private sendHttpRequest (request: ApiRequest) : Promise<any> {
+      if (!request.endpoint) {
+        throw new Error('request endpoint is not set')
+      }
+      
       const method = ['HEAD', 'GET', 'POST', 'PUT', 'DELETE'][request.method]
       const baseUrl = this.baseUrl.toString()
       const url = new URL(request.endpoint, baseUrl).toString()

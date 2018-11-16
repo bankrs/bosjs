@@ -2,18 +2,7 @@ import {suite, test} from 'mocha-typescript';
 import {assert} from 'chai';
 
 import UserError from '../../lib/errors/UserError';
-
-interface errorObj {
-    [key: string]: string
-}
-
-class ErrorFactory {
-    public constructor(private readonly errors: errorObj) {}
-
-    public getMessage(code: string): string {
-        return this.errors[code] || ''
-    }
-}
+import ErrorFactory from '../models/ErrorFactory';
 
 @suite
 class UserErrorTest

@@ -17,7 +17,7 @@ export default class DeveloperLoginRequest extends ApiRequest {
     /**
      * Allowed error codes.
      */
-    public readonly errorCodes = [401];
+    public readonly errorCodes = [400, 401];
 
     /**
      * Set the user's email address and password.

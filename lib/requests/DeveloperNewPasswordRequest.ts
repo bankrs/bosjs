@@ -23,7 +23,7 @@ export default class DeveloperNewPasswordRequest extends ApiRequest {
     /**
      * Allowed error codes.
      */
-    public readonly errorCodes = [400, 403];
+    public readonly errorCodes = [400];
 
     /**
      * @param user

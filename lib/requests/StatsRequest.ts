@@ -24,22 +24,31 @@ export default abstract class StatsRequest extends ApiRequest { // eslint-disabl
      * @returns Endpoint for this request.
      */
     public get endpoint () {
-      const fromDate = [this.from.getFullYear(), this.from.getMonth() + 1, this.from.getDate()]
-
-      for (let i = 0; i < 3; i++) {
-        if (isNaN(fromDate[i])) {
-          throw new Error("'from' date not match YYYY-MM-DD format")
-        }
-      }
-
-      const toDate = [this.to.getFullYear(), this.to.getMonth() + 1, this.to.getDate()]
-
-      for (let i = 0; i < 3; i++) {
-        if (isNaN(toDate[i])) {
-          throw new Error("'to' date not match YYYY-MM-DD format")
-        }
-      }
+      const fromDate = this.formatDate([this.from.getFullYear(), this.from.getMonth() + 1, this.from.getDate()])
+      const toDate = this.formatDate([this.to.getFullYear(), this.to.getMonth() + 1, this.to.getDate()])
 
       return `/v1${this.domain}?from_date=${fromDate.join('-')}&to_date=${toDate.join('-')}`
+    }
+
+    private formatDate(date: number[]): string[]
+    {
+      const formated: string[] = []
+
+      for (let i = 0; i < 3; i++) {
+        if (isNaN(date[i])) {
+          throw new Error("date not match YYYY-MM-DD format")
+        }
+
+        const d = date[i]
+
+        if (i > 0 && d < 10) {
+          formated.push(`0${d}`)
+          continue
+        }
+
+        formated.push(d.toString())
+      }
+
+      return formated
     }
 }

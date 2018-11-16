@@ -18,7 +18,7 @@ export default class CredentialCreateRequest extends ApiRequest {
     /**
      * Allowed error codes.
      */
-    public readonly errorCodes = [400, 403, 409];
+    public readonly errorCodes = [400, 409];
 
     private id: string;
 
