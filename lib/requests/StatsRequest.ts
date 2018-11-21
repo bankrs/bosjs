@@ -30,13 +30,12 @@ export default abstract class StatsRequest extends ApiRequest { // eslint-disabl
       return `/v1${this.domain}?from_date=${fromDate.join('-')}&to_date=${toDate.join('-')}`
     }
 
-    private formatDate(date: number[]): string[]
-    {
+    private formatDate (date: number[]): string[] {
       const formated: string[] = []
 
       for (let i = 0; i < 3; i++) {
         if (isNaN(date[i])) {
-          throw new Error("date not match YYYY-MM-DD format")
+          throw new Error('date not match YYYY-MM-DD format')
         }
 
         const d = date[i]

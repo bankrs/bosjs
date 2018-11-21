@@ -17,7 +17,7 @@ class ApplicationCreateRequestTest {
   }
 
   @test
-  'request method is POST' () {
+  'request method' () {
     assert.strictEqual(this.request.method, ApiRequest.Method.POST)
   }
 

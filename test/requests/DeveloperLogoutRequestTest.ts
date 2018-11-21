@@ -13,7 +13,7 @@ class DeveloperLogoutRequestTest {
   }
 
   @test
-  'request method is POST' () {
+  'request method' () {
     assert.strictEqual(new DeveloperLogoutRequest(new User()).method, ApiRequest.Method.POST)
   }
 

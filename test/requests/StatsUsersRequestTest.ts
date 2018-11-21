@@ -13,7 +13,7 @@ class StatsUsersRequestTest {
   }
 
   @test
-  'request method is GET' () {
+  'request method' () {
     assert.strictEqual(this.request.method, ApiRequest.Method.GET)
   }
 

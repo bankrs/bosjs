@@ -12,7 +12,7 @@ class DeveloperLoginRequestTest {
   }
 
   @test
-  'request method is POST' () {
+  'request method' () {
     assert.strictEqual(new DeveloperLoginRequest('', '').method, ApiRequest.Method.POST)
   }
 

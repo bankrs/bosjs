@@ -12,7 +12,7 @@ class DeveloperPasswordResetRequestTest {
   }
 
   @test
-  'request method is POST' () {
+  'request method' () {
     assert.strictEqual(new DeveloperPasswordResetRequest('', '').method, ApiRequest.Method.POST)
   }
 

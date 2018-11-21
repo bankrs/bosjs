@@ -19,7 +19,7 @@ class WebhookUpdateRequestTest {
   }
 
   @test
-  'request method is PUT' () {
+  'request method' () {
     assert.strictEqual(this.request.method, ApiRequest.Method.PUT)
   }
 

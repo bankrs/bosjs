@@ -2,6 +2,6 @@
  * Describe authenticated user/developer who makes request
  */
 export default interface user {
-    loggedIn(): boolean
-    authToken(): string
+    authToken(): string // authorization token
+    appKey(): string // application key
 }

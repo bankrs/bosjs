@@ -13,7 +13,7 @@ class WebhookDeleteRequestTest {
   }
 
   @test
-  'request method is DELETE' () {
+  'request method' () {
     assert.strictEqual(this.request.method, ApiRequest.Method.DELETE)
   }
 

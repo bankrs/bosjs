@@ -4,14 +4,14 @@ import User from '../authentication/User' // eslint-disable-line no-unused-vars
 /**
  * Search for a financial provider by query string.
  */
-export default class ProvidersSearchRequest extends ApiRequest {
+export default class ProviderSearchRequest extends ApiRequest {
     /**
      * Search query
      */
     private readonly q: string;
 
     /**
-     * @param user
+     * @param user User should have appKey
      * @param q
      */
     public constructor (user: User, q: string) {

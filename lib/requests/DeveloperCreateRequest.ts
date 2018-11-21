@@ -3,7 +3,7 @@ import ApiRequest from '../ApiRequest'
 /**
  * New user registration request.
  */
-export default class DeveloperRegistrationRequest extends ApiRequest {
+export default class DeveloperCreateRequest extends ApiRequest {
     /**
      * Request method.
      */

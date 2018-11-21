@@ -133,7 +133,7 @@ export default class ApiClient {
       if (!request.endpoint) {
         throw new Error('request endpoint is not set')
       }
-      
+
       const method = ['HEAD', 'GET', 'POST', 'PUT', 'DELETE'][request.method]
       const baseUrl = this.baseUrl.toString()
       const url = new URL(request.endpoint, baseUrl).toString()
@@ -143,11 +143,13 @@ export default class ApiClient {
       params.mode = 'cors'
       params.headers = []
 
-      if (request.user && request.user.loggedIn()) {
-        params.headers.push(['X-Token', request.user.authToken()])
+      if (request.user) {
+        if (request.user.authToken() !== '') {
+          params.headers.push(['X-Token', request.user.authToken()])
+        }
 
-        if (request.appKey) {
-          params.headers.push(['X-Application-Key', request.appKey])
+        if (request.user.appKey() !== '') {
+          params.headers.push(['X-Application-Key', request.user.appKey()])
         }
       }
 

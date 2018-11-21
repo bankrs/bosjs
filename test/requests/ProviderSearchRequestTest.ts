@@ -2,18 +2,18 @@ import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
 import ApiRequest from '../../lib/ApiRequest'
-import ProvidersSearchRequest from '../../lib/requests/ProvidersSearchRequest'
+import ProviderSearchRequest from '../../lib/requests/ProviderSearchRequest'
 import User from '../models/User'
 
 @suite
-class ProvidersSearchRequestTest {
+class ProviderSearchRequestTest {
   @test
   'expected endpoint' () {
     assert.strictEqual(this.request.endpoint, '/v1/providers?q=bank%201')
   }
 
   @test
-  'request method is GET' () {
+  'request method' () {
     assert.strictEqual(this.request.method, ApiRequest.Method.GET)
   }
 
@@ -41,6 +41,6 @@ class ProvidersSearchRequestTest {
   }
 
   private get request () {
-    return new ProvidersSearchRequest(new User(), ' bank 1  ')
+    return new ProviderSearchRequest(new User(), ' bank 1  ')
   }
 }

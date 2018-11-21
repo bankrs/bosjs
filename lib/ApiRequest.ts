@@ -38,11 +38,6 @@ abstract class ApiRequest {
     public readonly errorCodes = [400];
 
     /**
-     * Set Application key
-     */
-    public readonly appKey: string = '';
-
-    /**
      * Set this request payload.
      *
      * @param payload data to send
@@ -53,9 +48,8 @@ abstract class ApiRequest {
     /**
      * Allowed success and error codes.
      */
-    public get expectedCodes(): number[]
-    {
-        return this.successCodes.concat(this.errorCodes)
+    public get expectedCodes (): number[] {
+      return this.successCodes.concat(this.errorCodes)
     }
 }
 
