@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * Describe authenticated user/developer who makes request
  */

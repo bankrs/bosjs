@@ -1,7 +1,6 @@
 # bosjs - a Bankrs OS JavaScript client
 
-This is the official JavaScript client for accessing the Bankrs OS API.
-
+This is the official JavaScript client for accessing the Bankrs OS [API](https://bankrs.docs.apiary.io).
 
 ## Installation 
 ```sh
