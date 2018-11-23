@@ -4,7 +4,7 @@ import UnexpectedCode from './errors/UnexpectedCode'
 import UserError from './errors/UserError'
 import Unauthorized from './errors/Unauthorized'
 import ErrorFactory from './errors/ErrorFactory'
-import {ApiRequest} from './ApiRequest'
+import { ApiRequest } from './ApiRequest'
 import Config from './Config'
 
 export default class ApiClient {

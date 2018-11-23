@@ -1,4 +1,4 @@
-import {ApiRequest, Method} from '../ApiRequest'
+import { ApiRequest, Method } from '../ApiRequest' // eslint-disable-line no-unused-vars
 
 /**
  * Send confirmation token

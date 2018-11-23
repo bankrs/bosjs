@@ -3,4 +3,3 @@ export default {
   productionURL: 'https://api.bankrs.com',
   sandboxURL: 'https://api.sandbox.bankrs.com'
 }
-
