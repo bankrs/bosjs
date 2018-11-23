@@ -4,7 +4,8 @@ import UnexpectedCode from './errors/UnexpectedCode'
 import UserError from './errors/UserError'
 import Unauthorized from './errors/Unauthorized'
 import ErrorFactory from './errors/ErrorFactory'
-import ApiRequest from './ApiRequest'
+import {ApiRequest} from './ApiRequest'
+import Config from './Config'
 
 export default class ApiClient {
     /**
@@ -26,11 +27,6 @@ export default class ApiClient {
      * List of slots to be invoked when an unexpected error occurs.
      */
     private onUnexpectedErrorSlots: ((error: Error, request: ApiRequest) => void)[] = [];
-
-    /**
-     * Client version
-     */
-    public readonly version = '1.0.0';
 
     private environment: string = '';
 
@@ -162,7 +158,7 @@ export default class ApiClient {
         params.body = JSON.stringify(request.payload)
       }
 
-      params.headers.push(['User-Agent', 'bosjs-bankrs-os-client/' + this.version])
+      params.headers.push(['User-Agent', 'bosjs-bankrs-os-client/' + Config.version])
 
       if (this.headers) {
         for (let i = 0; i < this.headers.length; i++) {

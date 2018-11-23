@@ -1,5 +1,6 @@
 import ApiClient from './lib/ApiClient'
 import ErrorFactory from './lib/errors/ErrorFactory'
+import c from './lib/Config'
 
 interface config {
 	url: string,
@@ -9,8 +10,7 @@ interface config {
 }
 
 export * from './lib/requests'
-export const productionURL = 'https://api.bankrs.com'
-export const sandboxURL = 'https://api.sandbox.bankrs.com'
+export const config = c
 
 /**
  * Creates new API client
