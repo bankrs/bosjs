@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import ApplicationSettingsUpdateRequest from '../../lib/requests/ApplicationSettingsUpdateRequest'
 import User from '../models/User'
 
@@ -18,7 +18,7 @@ class ApplicationSettingsUpdateRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.PUT)
+    assert.strictEqual(this.request.method, Method.PUT)
   }
 
   @test

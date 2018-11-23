@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import RepeatedTransactionListRequest from '../../lib/requests/RepeatedTransactionListRequest'
 import User from '../models/User'
 
@@ -16,7 +16,7 @@ class RepeatedTransactionListRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.GET)
+    assert.strictEqual(this.request.method, Method.GET)
   }
 
   @test

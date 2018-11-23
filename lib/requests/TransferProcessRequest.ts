@@ -1,5 +1,5 @@
 
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import SnakeCase from '../util/SnakeCase'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
@@ -20,7 +20,7 @@ export default class TransferProcessRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     /**
      * Allowed success codes.

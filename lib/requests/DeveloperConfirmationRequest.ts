@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 
 /**
  * Send confirmation token
@@ -7,7 +7,7 @@ export default class DeveloperConfirmationRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     /**
      * Allowed success codes.

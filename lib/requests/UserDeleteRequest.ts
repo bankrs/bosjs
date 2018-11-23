@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 /**
@@ -8,7 +8,7 @@ export default class UserDeleteRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.DELETE;
+    public readonly method = Method.DELETE;
 
     /**
      * Allowed success codes.

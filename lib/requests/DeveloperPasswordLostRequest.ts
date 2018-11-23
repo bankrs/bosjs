@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 
 /**
  * Password reset request.
@@ -7,7 +7,7 @@ export default class DeveloperPasswordLostRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     /**
      * Endpoint for this request.

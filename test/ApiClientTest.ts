@@ -5,7 +5,7 @@ import ApplicationCreateRequest from '../lib/requests/ApplicationCreateRequest';
 import AccessDenied from '../lib/errors/AccessDenied';
 import UserError from '../lib/errors/UserError';
 import ApiClient from '../lib/ApiClient';
-import ApiRequest from '../lib/ApiRequest';
+import {ApiRequest} from '../lib/ApiRequest';
 import User from './models/User';
 
 @suite

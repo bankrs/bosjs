@@ -4,14 +4,9 @@ import User from './authentication/User'
 /**
  * Enumeration of allowed request methods.
  */
-enum Method {HEAD, GET, POST, PUT, DELETE}
+export enum Method {HEAD, GET, POST, PUT, DELETE}
 
-abstract class ApiRequest {
-    /**
-     * Enumeration of allowed request methods.
-     */
-    public static readonly Method = Method;
-
+export abstract class ApiRequest {
     /**
      * Request method.
      */
@@ -52,5 +47,3 @@ abstract class ApiRequest {
       return this.successCodes.concat(this.errorCodes)
     }
 }
-
-export default ApiRequest

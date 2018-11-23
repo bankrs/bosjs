@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import JobAnswerRequest from '../../lib/requests/JobAnswerRequest'
 import User from '../models/User'
 
@@ -22,7 +22,7 @@ class JobAnswerRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.PUT)
+    assert.strictEqual(this.request.method, Method.PUT)
   }
 
   @test

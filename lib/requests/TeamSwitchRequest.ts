@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 /**
@@ -18,7 +18,7 @@ export default class TeamSwitchRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     private teamId: string | undefined;
 

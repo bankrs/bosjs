@@ -1,13 +1,13 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../lib/ApiRequest'
+import {ApiRequest, Method} from '../lib/ApiRequest'
 
 @suite
 class ApiRequestTest {
   @test
   'default method is GET' () {
-    assert.strictEqual(new class extends ApiRequest {}(null).method, ApiRequest.Method.GET)
+    assert.strictEqual(new class extends ApiRequest {}(null).method, Method.GET)
   }
 
   @test

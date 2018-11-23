@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import SnakeCase from '../util/SnakeCase'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
@@ -9,7 +9,7 @@ export default class TransactionCategoriseRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.PUT;
+    public readonly method = Method.PUT;
 
     /**
      * Allowed success codes.

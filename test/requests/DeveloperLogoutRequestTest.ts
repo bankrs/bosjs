@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import DeveloperLogoutRequest from '../../lib/requests/DeveloperLogoutRequest'
 import User from '../models/User'
 
@@ -14,7 +14,7 @@ class DeveloperLogoutRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(new DeveloperLogoutRequest(new User()).method, ApiRequest.Method.POST)
+    assert.strictEqual(new DeveloperLogoutRequest(new User()).method, Method.POST)
   }
 
   @test

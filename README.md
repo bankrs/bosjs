@@ -4,7 +4,7 @@ This is the official JavaScript client for accessing the Bankrs OS [API](https:/
 
 ## Installation 
 ```sh
-npm i bosjs --save
+npm i @bankrs/bosjs
 ```
 
 ## Usage

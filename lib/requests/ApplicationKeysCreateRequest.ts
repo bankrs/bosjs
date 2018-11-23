@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 /**
@@ -8,7 +8,7 @@ export default class ApplicationKeysCreateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     /**
      * Allowed success codes.

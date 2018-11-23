@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 export default abstract class StatsRequest extends ApiRequest { // eslint-disable-line no-undef

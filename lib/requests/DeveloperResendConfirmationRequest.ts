@@ -1,14 +1,14 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 /**
  * Resend confirmation email
  */
-export default class ResendConfirmationRequest extends ApiRequest {
+export default class DeveloperResendConfirmationRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.POST;
+    public readonly method = Method.POST;
 
     /**
      * Allowed success codes.

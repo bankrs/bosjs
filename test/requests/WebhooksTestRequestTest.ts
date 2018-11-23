@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import WebhookTestRequest from '../../lib/requests/WebhookTestRequest'
 import User from '../models/User'
 
@@ -14,7 +14,7 @@ class WebhookTestRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.POST)
+    assert.strictEqual(this.request.method, Method.POST)
   }
 
   @test

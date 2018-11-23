@@ -43,7 +43,7 @@ export { default as RepeatedTransactionDeleteRequest } from './RepeatedTransacti
 export { default as RepeatedTransactionGetRequest } from './RepeatedTransactionGetRequest'
 export { default as RepeatedTransactionListRequest } from './RepeatedTransactionListRequest'
 export { default as RepeatedTransactionUpdateRequest } from './RepeatedTransactionUpdateRequest'
-export { default as ResendConfirmationRequest } from './ResendConfirmationRequest'
+export { default as DeveloperResendConfirmationRequest } from './DeveloperResendConfirmationRequest'
 export { default as ResetSandboxRequest } from './ResetSandboxRequest'
 export { default as ScheduledTransactionGetRequest } from './ScheduledTransactionGetRequest'
 export { default as ScheduledTransactionListRequest } from './ScheduledTransactionListRequest'

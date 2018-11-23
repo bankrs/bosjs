@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import ToParams from '../util/ToParams'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 

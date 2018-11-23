@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import AccessRefreshRequest from '../../lib/requests/AccessRefreshRequest'
 import User from '../models/User'
 
@@ -14,7 +14,7 @@ class AccessRefreshRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.POST)
+    assert.strictEqual(this.request.method, Method.POST)
   }
 
   @test

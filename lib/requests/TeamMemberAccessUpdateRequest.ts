@@ -1,4 +1,4 @@
-import ApiRequest from '../ApiRequest'
+import {ApiRequest, Method} from '../ApiRequest'
 import User from '../authentication/User' // eslint-disable-line no-unused-vars
 
 /**
@@ -18,7 +18,7 @@ export default class TeamMemberAccessUpdateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = ApiRequest.Method.PUT;
+    public readonly method = Method.PUT;
 
     private id: string;
 

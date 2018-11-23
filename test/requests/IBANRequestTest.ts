@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import IBANRequest from '../../lib/requests/IBANRequest'
 import User from '../models/User'
 
@@ -14,7 +14,7 @@ class IBANRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.GET)
+    assert.strictEqual(this.request.method, Method.GET)
   }
 
   @test

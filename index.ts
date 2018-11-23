@@ -3,9 +3,9 @@ import ErrorFactory from './lib/errors/ErrorFactory'
 
 interface config {
 	url: string,
-	errorFactory: ErrorFactory,
-	headers: {name: string, value: string}[],
-	httpClient: (input: RequestInfo, init?: RequestInit) => Promise<Response>
+	errorFactory?: ErrorFactory,
+	headers?: {name: string, value: string}[],
+	httpClient?: (input: RequestInfo, init?: RequestInit) => Promise<Response>
 }
 
 export * from './lib/requests'

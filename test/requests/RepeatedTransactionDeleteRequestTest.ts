@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import RepeatedTransactionDeleteRequest from '../../lib/requests/RepeatedTransactionDeleteRequest'
 import User from '../models/User'
 
@@ -18,7 +18,7 @@ class RepeatedTransactionDeleteRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.DELETE)
+    assert.strictEqual(this.request.method, Method.DELETE)
   }
 
   @test

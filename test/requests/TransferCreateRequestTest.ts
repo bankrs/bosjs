@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import TransferCreateRequest from '../../lib/requests/TransferCreateRequest'
 import User from '../models/User'
 
@@ -26,7 +26,7 @@ class TransferCreateRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(this.request.method, ApiRequest.Method.POST)
+    assert.strictEqual(this.request.method, Method.POST)
   }
 
   @test

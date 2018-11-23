@@ -1,7 +1,7 @@
 import { suite, test } from 'mocha-typescript'
 import { assert } from 'chai'
 
-import ApiRequest from '../../lib/ApiRequest'
+import {Method} from '../../lib/ApiRequest'
 import DeveloperPasswordResetRequest from '../../lib/requests/DeveloperPasswordResetRequest'
 
 @suite
@@ -13,7 +13,7 @@ class DeveloperPasswordResetRequestTest {
 
   @test
   'request method' () {
-    assert.strictEqual(new DeveloperPasswordResetRequest('', '').method, ApiRequest.Method.POST)
+    assert.strictEqual(new DeveloperPasswordResetRequest('', '').method, Method.POST)
   }
 
   @test
