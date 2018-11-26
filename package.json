@@ -1,6 +1,6 @@
 {
   "name": "@bankrs/bosjs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Bankrs OS JavaScript client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && node build/requests.js && tsc",
+    "build": "npm run clean && node build/build.js && tsc && rm -rf dist/test",
     "lint": "./node_modules/.bin/eslint \"lib/**\" --fix",
     "test": "nyc mocha",
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run build"

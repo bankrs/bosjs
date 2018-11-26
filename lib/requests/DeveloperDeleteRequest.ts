@@ -8,7 +8,7 @@ export default class DeveloperDeleteRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.DELETE;
+    public readonly method: Method = Method.DELETE;
 
     /**
      * Endpoint for this request.

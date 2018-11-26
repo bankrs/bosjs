@@ -22,7 +22,7 @@ export default class RepeatedTransactionUpdateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.PUT;
+    public readonly method: Method = Method.PUT;
 
     /**
      * Allowed success codes.

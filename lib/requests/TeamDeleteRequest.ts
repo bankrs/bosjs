@@ -18,7 +18,7 @@ export default class TeamDeleteRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.DELETE;
+    public readonly method: Method = Method.DELETE;
 
     /**
      * @param user

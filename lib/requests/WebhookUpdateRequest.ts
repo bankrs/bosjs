@@ -8,7 +8,7 @@ export default class WebhookUpdateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.PUT;
+    public readonly method: Method = Method.PUT;
 
     private id: string;
 

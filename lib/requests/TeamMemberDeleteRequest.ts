@@ -18,7 +18,7 @@ export default class TeamMemberDeleteRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.DELETE;
+    public readonly method: Method = Method.DELETE;
 
     private id: string;
 

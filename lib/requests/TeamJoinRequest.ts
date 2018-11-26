@@ -18,7 +18,7 @@ export default class TeamJoinRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.POST;
+    public readonly method: Method = Method.POST;
 
     /**
      * @param user User if session present

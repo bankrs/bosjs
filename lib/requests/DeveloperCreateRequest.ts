@@ -7,7 +7,7 @@ export default class DeveloperCreateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.POST;
+    public readonly method: Method = Method.POST;
 
     /**
      * Endpoint for this request.

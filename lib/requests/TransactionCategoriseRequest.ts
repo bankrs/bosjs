@@ -9,7 +9,7 @@ export default class TransactionCategoriseRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.PUT;
+    public readonly method: Method = Method.PUT;
 
     /**
      * Allowed success codes.

@@ -18,7 +18,7 @@ export default class TeamSwitchRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.POST;
+    public readonly method: Method = Method.POST;
 
     private teamId: string | undefined;
 

@@ -10,7 +10,7 @@ export default class ApplicationSettingsUpdateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.PUT;
+    public readonly method: Method = Method.PUT;
 
     /**
      * @param user

@@ -8,7 +8,7 @@ export default class CredentialCreateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.POST;
+    public readonly method: Method = Method.POST;
 
     /**
      * Allowed success codes.

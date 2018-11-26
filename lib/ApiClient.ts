@@ -42,7 +42,7 @@ export default class ApiClient {
         private readonly baseUrl: URL | string,
         private readonly errorFactory?: ErrorFactory,
         private readonly headers?: Array<{name: string, value: string}>,
-        private readonly httpClient: (input: RequestInfo, init?: RequestInit) => Promise<Response> = fetch
+        private readonly httpClient?: (input: RequestInfo, init?: RequestInit) => Promise<Response>
     ) {}
 
     /**
@@ -167,7 +167,17 @@ export default class ApiClient {
         }
       }
 
-      return this.httpClient(url, params).then(response => this.handleHttpResponse(request, response))
+      if (this.httpClient) {
+        // custom client
+        return this.httpClient(url, params).then(response => this.handleHttpResponse(request, response))
+      }
+
+      // browser fetch
+      if (fetch !== undefined) {
+        return fetch(url, params).then(response => this.handleHttpResponse(request, response))
+      }
+
+      throw new Error('No HTTP client')
     }
 
     /**

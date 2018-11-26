@@ -18,7 +18,7 @@ export default class TeamUpdateRequest extends ApiRequest {
     /**
      * Request method.
      */
-    public readonly method = Method.PUT;
+    public readonly method: Method = Method.PUT;
 
     /**
      * @param user
