@@ -167,8 +167,8 @@ export default class ApiClient {
         }
       }
 
+      // custom client
       if (this.httpClient) {
-        // custom client
         return this.httpClient(url, params).then(response => this.handleHttpResponse(request, response))
       }
 

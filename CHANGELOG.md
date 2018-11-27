@@ -1,4 +1,4 @@
-## 1.0.1
-* Fix `import` on requests method
-* Minor fixes
-* Update README
+## 1.1.0
+* Fixed `import` bug on request methods
+* Minor improvements
+* Decreased lib size
